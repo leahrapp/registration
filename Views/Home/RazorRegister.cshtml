@@ -1,0 +1,43 @@
+﻿
+@model registration.Models.RegisterViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<style>
+    .notValid {
+        background: coral;
+    }
+</style>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+    <div>
+        <ul class="errors">
+            
+        </ul>
+        @using (Html.BeginForm("RazorRegister", "Home", FormMethod.Post))
+        {
+        @ViewBag.Success
+        @Html.ValidationSummary(false,"")
+        @Html.LabelFor(x => x.FirstName)
+        @Html.EditorFor(x => x.FirstName)
+        @Html.LabelFor(x => x.LastName)
+        @Html.EditorFor(x => x.LastName)
+       
+        <button type = "submit" >Submit Form</button>
+
+
+    }
+            </div>
+</body>
+</html>
+<script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+<script src="~/JavaScript.js"></script>

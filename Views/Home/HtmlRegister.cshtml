@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HtmlRegistration</title>
+</head>
+<body>
+    <div>
+        @ViewBag.Success
+        @Html.ValidationSummary(false, "");
+        <h1>Example of three different other ways to submit a form. this is considered "Weakly Typed"</h1>
+        <h3>Send this request to the HtmlRegister action </h3>
+        <form action="HtmlRegister/Home" method="post">
+            <label for="FirstName">First Name</label>
+            <input class="text-box single-line" data-val="true" data-val-required="The First Name field is required." id="FirstName" name="FirstName" type="text" value="">
+            <label for="LastName">Last Name</label>
+            <input class="text-box single-line" data-val="true" data-val-required="The Last Name field is required." id="LastName" name="LastName" type="text" value="">
+            <button type="submit">Submit Form</button>
+        </form>
+
+
+        <h3>Send this request to the  HtmlSubmitRequest action </h3>
+        <form action=" HtmlSubmitRequest/Home" method="post">
+            <label for="FirstName">First Name</label>
+            <input class="text-box single-line" data-val="true" data-val-required="The First Name field is required." name="FirstName" type="text" value="">
+            <label for="LastName">Last Name</label>
+            <input class="text-box single-line" data-val="true" data-val-required="The Last Name field is required."  name="LastName" type="text" value="">
+            <button type="submit">Submit Form</button>
+        </form>
+
+
+        <h3>Send this request to the HtmlSubmit action </h3>
+        <form action="HtmlSubmit/Home" method="post">
+            <label for="FirstName">First Name</label>
+            <input class="text-box single-line" data-val="true" data-val-required="The First Name field is required." name="FirstName" type="text" value="">
+            <label for="LastName">Last Name</label>
+            <input class="text-box single-line" data-val="true" data-val-required="The Last Name field is required." name="LastName" type="text" value="">
+            <button type="submit">Submit Form</button>
+        </form>
+    </div>
+</body>
+</html>
